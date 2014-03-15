@@ -1,0 +1,8 @@
+{
+                "mysqlUsername": "USERNAME",
+                "mysqlPassword": "PASSWORD",
+                "mysqlDatabase": "DATABASE",
+                "mpdPassword" : "PASSWORD",
+                "icecastPassword" : "PASSWORD",
+                "ipinfoApiKey" : "API_KEY"
+}
