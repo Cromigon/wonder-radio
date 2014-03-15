@@ -11,17 +11,20 @@ var hiddenInfo = require('./hidden.json');
 	{
 		"mysqlUsername": "USERNAME",
 		"mysqlPassword": "PASSWORD",
-		"mysqlDatabase": "DATABASE"
+		"mysqlDatabase": "DATABASE",
+		"mpdPassword" : "PASSWORD",
+		"icecastPassword" : "PASSWORD",
+		"ipinfoApiKey" : "API_KEY"
 	}
 */
 
 var mysqlUser = hiddenInfo.mysqlUsername;
 var mysqlPassword = hiddenInfo.mysqlPassword;
 var mysqlDatabase = hiddenInfo.mysqlDatabase;
-var mpdPassword = mysqlPassword;
+var mpdPassword = hiddenInfo.mpdPassword;
 var icecastMount = "/stream";
-var icecastPassword = mysqlPassword;
-var ipinfoApiKey = "15ac89298a362c69b7ce1c2cae0f0631f79c514e078fa8b93cef464c7e9a5ab7";
+var icecastPassword = hiddenInfo.icecastPassword;
+var ipinfoApiKey = hiddenInfo.ipinfoApiKey;
 
 var trackWait = 8*60; // In minutes
 var minimumRating = -10;
