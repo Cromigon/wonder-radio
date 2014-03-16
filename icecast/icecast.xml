@@ -135,23 +135,23 @@
 
         <!-- Note that if <chroot> is turned on below, these paths must both
              be relative to the new root, not the original root -->
-        <logdir>/var/log/icecast</logdir>
-        <webroot>/usr/share/icecast/web</webroot>
-        <adminroot>/usr/share/icecast/admin</adminroot>
-        <!-- <pidfile>/usr/share/icecast/icecast.pid</pidfile> -->
+        <logdir>/var/log/icecast2</logdir>
+        <webroot>/usr/share/icecast2/web</webroot>
+        <adminroot>/usr/share/icecast2/admin</adminroot>
+        <!-- <pidfile>/usr/share/icecast2/icecast.pid</pidfile> -->
 
         <!-- Aliases: treat requests for 'source' path as being for 'dest' path
              May be made specific to a port or bound address using the "port"
              and "bind-address" attributes.
           -->
         <!--
-        <alias source="/foo" destination="/bar"/>
+        <alias source="/foo" dest="/bar"/>
           -->
         <!-- Aliases: can also be used for simple redirections as well,
              this example will redirect all requests for http://server:port/ to
              the status page
           -->
-        <alias source="/" destination="/status.xsl"/>
+        <alias source="/" dest="/status.xsl"/>
     </paths>
 
     <logging>
@@ -172,7 +172,7 @@
         <chroot>0</chroot>
         <changeowner>
             <user>nobody</user>
-            <group>nobody</group>
+            <group>nogroup</group>
         </changeowner>
     </security>
 </icecast>
