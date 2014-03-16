@@ -108,11 +108,13 @@ $remaining = getQueueRemainingTime();
 		<div id="footercontent">
 			<?=getTotalTrackCount()?> tracks in database.<br>
 			Created by <a href="http://djazz.mine.nu/">djazz</a><br>
+			Patched by <a href="http://cromigon.se/">Cromigon</a><br>
 			Powered by <a href="http://www.musicpd.org/">MPD</a>, <a href="http://www.icecast.org/">Icecast</a>, <a href="http://php.net/">PHP</a>, <a href="https://mariadb.org/">MariaDB</a>, <a href="https://en.wikipedia.org/wiki/Nginx">nginx</a>, <a href="http://www.equestriadaily.com/">ponies</a>, <a href="http://nodejs.org/">Node.JS</a> and <a href="http://lesscss.org/">LESS</a>.<br>
 			It's all running on a <a href="http://www.raspberrypi.org/">Raspberry Pi</a> with <a href="http://archlinuxarm.org/">Arch Linux ARM</a>.<br>
 			<br>
 			View sourcecode: <a href="source.php">source.php</a><br>
-			Sourcecode on github: <a href="https://github.com/daniel-j/wonder-radio">https://github.com/daniel-j/wonder-radio</a><br>
+			Original Sourcecode on github: <a href="https://github.com/daniel-j/wonder-radio">https://github.com/daniel-j/wonder-radio</a><br>
+			Patched fork on github: <a href="https://github.com/Cromigon/wonder-radio">https://github.com/Cromigon/wonder-radio</a><br>
 			<br>
 			Other good radio stations:
 			<a href="http://everfree.net/channels/everfree-radio/playlist/">Everfree Radio</a>
