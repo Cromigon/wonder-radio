@@ -2,11 +2,12 @@
 
 ini_set("display_errors", "1");
 error_reporting(-1);
+require_once dirname(__DIR__)."/hidden.php";
 
-$icecastHost = "djazz.mine.nu";
-$icecastPort = 1338;
+$icecastHost = "cromigon.se";
+$icecastPort = 8000;
 $icecastMount = "/stream";
-$radioTitle = "DJazz's Music Radio";
+$radioTitle = "Music Radio";
 
 $trackWait = 4*60; // In minutes
 $queueWait = 20; // In minutes
@@ -31,8 +32,6 @@ $suggesionsPerPage = 20;
 
 	$musicPath = "/path/to/mpd's/music/folder/";
 */
-
-require_once dirname(__DIR__)."/hidden.php";
 
 $streamUrl = "http://".$icecastHost.":".$icecastPort.$icecastMount;
 $icecastpInfoUrl = "http://".$localIcecastHost.":".$localIcecastPort."/info_json.xsl";

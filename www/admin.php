@@ -14,10 +14,10 @@ if (isset($_POST['pswd']) && $_POST['pswd'] === $adminPass) {
 if ($state['admin']) {
 
 	if (isset($_GET['next'])) {
-		exec("mpc -h $mpdPassword@:: next -q --wait");
+		exec("mpc -h $mpdPassword@localhost next -q --wait");
 		sleep(2);
 	}
-	
+
 	header("Location: ./");
 	exit;
 }

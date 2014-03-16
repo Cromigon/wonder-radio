@@ -18,9 +18,9 @@ if (isset($_GET['truncate'])) {
 	exit;
 }
 
-exec("mpc -h $mpdPassword@:: update --wait -q");
+exec("mpc -h $mpdPassword@localhost update --wait -q");
 
-exec("mpc -h $mpdPassword@:: listall -f %file%@@%title%@@%artist%@@%album%@@%time% -q", $rawlist);
+exec("mpc -h $mpdPassword@localhost listall -f %file%@@%title%@@%artist%@@%album%@@%time% -q", $rawlist);
 
 $sqlTracks = $db->prepare("DELETE FROM tracks WHERE id = ?");
 $sqlQueue = $db->prepare("DELETE FROM queue WHERE trackId = ?");
@@ -96,7 +96,7 @@ $sqlUpdate = $db->prepare("UPDATE tracks SET title = ?, artist = ?, album = ?, t
 
 foreach ($list as $metadata) {
 	$tags = preg_replace('~[\W\_]~', ' ', basename($metadata[0], pathinfo($metadata[0], PATHINFO_EXTENSION))." ".$metadata[1]." ".$metadata[2]);
-	
+
 	@$sqlInsert->execute(array($metadata[0], $metadata[1], $metadata[2], $metadata[3], $tags, $metadata[4]));
 	if (intval($sqlInsert->errorCode()) === 0) {
 		echo "Added ".$metadata[0]."<br>";
