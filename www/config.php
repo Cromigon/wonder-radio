@@ -8,6 +8,7 @@ $icecastHost = "YOUR_HOST_HERE";
 $icecastPort = 8000;
 $icecastMount = "/stream";
 $radioTitle = "YOUR_TITLE_HERE";
+$subtitle = "YOUR_SUBTITLE_HERE";
 
 $trackWait = 4*60; // In minutes
 $queueWait = 20; // In minutes
