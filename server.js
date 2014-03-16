@@ -32,10 +32,10 @@ var minimumRating = -10;
 var db = mysql.createConnection({
 	user     : mysqlUser,
 	password : mysqlPassword,
-	port: '/var/run/mysqld/mysqld.sock'
+	socketPath: '/var/run/mysqld/mysqld.sock',
+	database: mysqlDatabase
 });
 db.connect();
-db.query('USE `'+mysqlDatabase+'`');
 console.log("Connected to database");
 
 var icecastOptions = {
@@ -177,7 +177,6 @@ function queueTrack(file, cb) {
 }
 
 function queueRandom(cb) {
-
 	// Only tracks played more than trackWait minutes ago and got a rating above minimumRating
 	db.query('SELECT file, IFNULL((SELECT SUM(vote) FROM votes WHERE tracks.id=votes.trackId), 0) as rating, lastplayed FROM tracks WHERE (SELECT id FROM queue WHERE tracks.id=queue.trackId) IS NULL AND (lastplayed < date_sub(now(), interval '+trackWait+' minute) OR lastplayed IS NULL) HAVING rating > '+minimumRating+' ORDER BY rating*RAND()*2-plays*RAND()+RAND()*10 DESC LIMIT 1', function(err, rows, fields) {
 		if (err) console.log(err);
