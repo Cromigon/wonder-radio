@@ -1,0 +1,13 @@
+ <?php
+        $mysqlHost = 'localhost';
+        $mysqlUser = 'USERNAME';
+        $mysqlPassword = 'PASSWORD';
+        $mysqlDatabase = 'DATABASE';
+        $mpdPassword = $mysqlPassword;
+        $adminPass = $mysqlPassword;
+
+        $localIcecastHost = '127.0.0.1';
+        $localIcecastPort = 8000;
+
+        $musicPath = "/path/to/mpd's/music/folder/";
+
