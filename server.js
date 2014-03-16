@@ -6,18 +6,6 @@ var child_process = require('child_process');
 var mysql = require('mysql');
 var hiddenInfo = require('./hidden.json');
 
-// Make a hidden.json in this folder that looks like this:
-/*
-	{
-		"mysqlUsername": "USERNAME",
-		"mysqlPassword": "PASSWORD",
-		"mysqlDatabase": "DATABASE",
-		"mpdPassword" : "PASSWORD",
-		"icecastPassword" : "PASSWORD",
-		"ipinfoApiKey" : "API_KEY"
-	}
-*/
-
 var mysqlUser = hiddenInfo.mysqlUsername;
 var mysqlPassword = hiddenInfo.mysqlPassword;
 var mysqlDatabase = hiddenInfo.mysqlDatabase;
