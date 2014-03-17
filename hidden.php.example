@@ -3,8 +3,8 @@
         $mysqlUser = 'USERNAME';
         $mysqlPassword = 'PASSWORD';
         $mysqlDatabase = 'DATABASE';
-        $mpdPassword = $mysqlPassword;
-        $adminPass = $mysqlPassword;
+        $mpdPassword = 'MPD_PASSWORD';
+        $adminPass = 'WEB_ADMIN_PASS';
 
         $localIcecastHost = '127.0.0.1';
         $localIcecastPort = 8000;
