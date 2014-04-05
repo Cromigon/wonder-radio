@@ -30,4 +30,4 @@ He took the build code, patched it up to fit more distros out-of-the-box and str
 
 # License
 
-As of this moment, license has been issued.
+As of this moment, no license has been issued.
